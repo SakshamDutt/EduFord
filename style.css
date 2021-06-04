@@ -8,9 +8,10 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: white;
+    color: black;
     text-rendering: optimizeLegibility;
 }
+
 
 ul { list-style-type: none; }
 
@@ -25,6 +26,11 @@ a { text-decoration: none; }
 .row {
     max-width: 1140px;
     margin: 0 auto;
+}
+
+header,
+section {
+    margin-bottom: 80px;
 }
 
 .btn {
@@ -47,6 +53,19 @@ a { text-decoration: none; }
     box-shadow: 0 1px 8px var(--primary-color);
 }
 
+h1 {
+    font-size: 190%;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 130%;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 .hidden { display: none; }
 /* HEADER */
@@ -59,6 +78,7 @@ header {
     padding: 35px 100px;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 nav {
@@ -114,12 +134,7 @@ nav {
     margin: auto 0px;
 }
 
-.hero-textbox h1 {
-    font-weight: 700;
-    font-size: 270%;
-    margin-bottom: 30px;
-    text-align: center;
-}
+.hero-textbox h1 { font-size: 270%; }
 
 .hero-textbox p {
     font-size: 70%;
@@ -128,6 +143,48 @@ nav {
     line-height: 20px;
     margin-bottom: 40px;
 }
+
+
+/* SECTION OFFERS */
+.section__offers .row {
+    text-align: center;
+}
+
+.section__offers .row:first-child p {
+    font-size: 85%;
+    font-weight: 300;
+}
+
+.section__offers--courses {
+    display: flex;
+    font-size: 70%;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.box {
+    width: 28%;
+    padding: 35px ;
+    background-color: #fff3f3;
+    border-radius: 5px;
+    transition: box-shadow 250ms;
+    
+}
+
+.box:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.box p {
+    line-height: 115%;
+    color: rgb(105, 105, 105);
+    font-size: 100%;
+}
+
+
+
+
 
 
 /* Media Queries */
@@ -143,9 +200,7 @@ nav {
         font-weight: 600;
     }
 
-    .hero-textbox p {
-        width: 75%;
-    }
+    .hero-textbox p { width: 75%; }
 }
 
 @media (max-width:768px) {
@@ -156,16 +211,33 @@ nav {
 
     /* Responsive Navigation */
 
-    .main-nav { 
-        display: none;
-        /* font-size: 65%; */
-     }
+    .main-nav { display: none; }
     
     .main-nav li { margin-left: 25px; }
 
     .fas.menu-icon {
         display: block;
     }
+
+
+    .section__offers--courses {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 30px 30px ;
+        align-items: center;
+
+    }
+
+    .box {
+        width: 46%;
+        margin-bottom: 20px;
+        padding: 30px 20px;
+    }
+
+    .box:first-of-type {
+        margin-right: 20px;
+    } 
 }
 
 /* CUSTOM */
@@ -181,8 +253,23 @@ nav {
         font-size: 190%;
     }
 
+    header { padding: 35px 15px; }
+
+    .main-nav li { margin-left: 15px; }
+
     .hero-textbox p {
         margin-bottom: 20px;
         width: 82%;
     }    
+
+    .section__offers .row:first-child p { font-size: 85%; }
+
+    .section__offers--courses {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        width: 80%;
+        margin-bottom: 30px;
+    }
 }
