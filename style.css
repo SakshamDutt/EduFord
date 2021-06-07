@@ -173,15 +173,15 @@ nav {
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
-.box p {
+.box p {    
     line-height: 115%;
-    color: rgb(105, 105, 105);
+    color: rgb(0, 0, 0);
     font-size: 100%;
 }
 
 /* Section campus */
 .section__campus {
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(248, 248, 248);
 }
 
 .section__campus--gallery {
@@ -190,6 +190,7 @@ nav {
 
 .section__campus--gallery div {
     width: 80%;
+    height: 80%;
 }
 
 .section__campus--gallery div:nth-of-type(2) {
@@ -248,6 +249,45 @@ nav {
 }
 
 
+/* Section Testimonials */
+.section__testimonials {
+    background-color: rgb(248, 248, 248);
+}
+
+.feedback-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.feedback-box {
+    background-color: #ffebeb;
+    padding: 20px 35px;
+    width: 40%;
+}
+
+.feedback-box p {
+    font-size: 70%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user h3 {
+    font-size: 100%;
+}
+
+.user img {
+    width: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
 
 
 /* Media Queries */
@@ -268,6 +308,8 @@ nav {
     .section__campus--gallery div { width: 100%; }
 
     .section__facilities--box { width: 30%; }
+
+    .feedback-box { width: 45%; }
 }
 
 @media (max-width:768px) {
@@ -314,7 +356,7 @@ nav {
 
     .section__campus--gallery div {
         width: 70%;
-        height: 75%;
+        height: 60%;
         margin-top: 20px;
     }
 
@@ -330,11 +372,33 @@ nav {
     }
 
     .section__facilities--box {
-        width: 80%;
+        width: 70%;
     }
 
     .section__facilities--box:nth-of-type(2) {
         margin: 50px 0px;
+    }
+
+    .feedback-container {
+        flex-direction: column;
+    }
+
+    .feedback-box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .feedback-box p { 
+        line-height: 19px;
+        margin-bottom: 18px;
+    }
+
+    .user h3 {
+        font-size: 80%;
+    }
+
+    .user img {
+        width: 40px;
     }
 }
 
@@ -374,7 +438,8 @@ nav {
     }
 
     .section__campus--gallery div {
-        width: 100%;
+        width: 70vw;
+        height: 60vh;
     }
     .section__campus--gallery div img { height: 85%; }
 
@@ -384,5 +449,13 @@ nav {
 
     .section__facilities--box {
         width: 100%;
+    }
+
+    .feedback-box {
+        width: 130%;
+    }    
+
+    .user img {
+        margin-right: 0px;
     }
 }
